@@ -1,1 +1,1 @@
-web: bin/web.sh
+web: trap '' SIGTERM; node lib/server.js & bin/minecraft.sh & wait -n; kill -SIGTERM -$$; wait
